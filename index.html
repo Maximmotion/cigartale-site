@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CigarTale</title>
+<meta name="description" content="Every cigar has a story. CigarTale is an audio companion that recognises a cigar band and tells the history and craft behind the cigar. For adults 18 and over.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Big+Shoulders+Display:wght@800&family=Karla:wght@400;700&display=swap">
+<style>
+:root{--ink:#1B1712;--cedar:#2A211A;--border:#4A3D31;--cream:#F1E8D6;--cream2:#BDB09B;--muted:#8C8072;--ember:#E5521C;--gold:#C9A86A;--tobacco:#9C5A2E}
+*{box-sizing:border-box}html{color-scheme:dark}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:Karla,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--gold)}a:hover{color:var(--cream)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.lockup{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.word{font-family:"Josefin Sans","Gill Sans",sans-serif;font-weight:300;font-size:15px;letter-spacing:.32em;margin-right:-.32em;text-transform:uppercase;line-height:1}
+nav a{font-weight:700;font-size:14px;margin-left:20px;text-decoration:none;color:var(--cream2)}nav a:hover{color:var(--cream)}
+h1,h2,h3{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:800;text-transform:uppercase;line-height:.95;margin:0}
+h1{font-size:clamp(40px,8vw,64px)}h2{font-size:28px;margin-top:44px}h3{font-size:20px;margin-top:28px;color:var(--gold)}
+p,li{color:var(--cream2)}p{margin:14px 0}li{margin:6px 0}
+.lead{font-weight:700;color:var(--cream);font-size:19px}
+.eyebrow{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.hero{padding:56px 0 40px}.hero .eyebrow{display:block;margin-bottom:18px}
+.band{display:flex;align-items:center;gap:10px;margin:36px 0}.band i{flex:1;height:1.5px;background:var(--gold);display:block}.band b{width:6px;height:6px;border-radius:50%;background:var(--ember);display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:8px 0 24px}
+.card{background:var(--cedar);border-radius:4px;padding:18px;box-shadow:0 2px 0 #3A2E24}.card h3{margin:0 0 6px;color:var(--cream)}.card p{margin:0;font-size:15px}
+.note{border:1.5px dashed var(--cream2);border-radius:2px;padding:6px 10px;display:inline-block;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cream2);transform:rotate(-1.5deg)}
+.meta{font-size:14px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:14px 0}th,td{text-align:left;vertical-align:top;padding:8px 10px 8px 0;border-top:1px solid var(--border);color:var(--cream2)}th{color:var(--cream);font-weight:700}
+footer{margin-top:64px;padding:28px 0 40px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--muted)}footer a{color:var(--cream2);text-decoration:none}footer a:hover{color:var(--cream)}
+@media (max-width:480px){nav a{margin-left:14px}header.top{flex-wrap:wrap;gap:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="lockup" href="./"><svg viewBox="0 0 100 100" width="26" height="26" aria-hidden="true"><g fill="none" stroke="#F1E8D6" stroke-width="5" stroke-linecap="round"><rect x="10" y="30" width="80" height="40" rx="20.0"/><circle cx="50" cy="50" r="11"/><line x1="21" y1="50" x2="30" y2="50"/><line x1="70" y1="50" x2="79" y2="50"/></g></svg><span class="word">cigartale</span></a>
+  <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+</header>
+
+<section class="hero">
+  <div style="margin-bottom:28px"><svg viewBox="0 0 100 100" width="140" height="140" aria-hidden="true"><g fill="none" stroke="#C9A86A" stroke-width="2.6" stroke-linecap="round"><rect x="10" y="34" width="80" height="32" rx="16.0"/><circle cx="50" cy="50" r="11"/><circle cx="50" cy="50" r="4.5"/><line x1="22" y1="50" x2="30" y2="50"/><line x1="70" y1="50" x2="78" y2="50"/></g></svg></div>
+  <span class="eyebrow">An audio companion for cigar lovers</span>
+  <h1>Every cigar has a story.</h1>
+  <p class="lead">Point the camera at the band, or type the name, and a cigar master tells you where the leaf was grown, who rolled it and how the line came to be.</p>
+  <p class="meta">Coming to iPhone and Android. Pilot in Dubai, in English and Russian. For adults 18 and over.</p>
+</section>
+<div class="band"><i></i><b></b><i></i></div>
+<div class="grid">
+  <div class="card"><h3>Scan a band</h3><p>The camera reads the printed band and finds the cigar line in our catalogue. No photo is kept.</p></div>
+  <div class="card"><h3>Hear the story</h3><p>A short teaser for free, then a full story of about nine minutes: the place, the people, the making, the tradition.</p></div>
+  <div class="card"><h3>Keep your Humidor</h3><p>Save the cigars you loved with their size, rate them, and pick a story up where you left it.</p></div>
+</div>
+<p>CigarTale is about history and craft. It does not sell tobacco, does not link to shops and does not tell anyone to smoke. Stories are written from published sources and reviewed by a cigar master; nothing in the app claims that a cigar is genuine or counterfeit.</p>
+<p class="meta"><span class="note">Stories &middot; Cigar master &middot; 18+</span></p>
+
+<footer>
+  <span>&copy; 2026 CigarTale</span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="support.html">Support</a><a href="mailto:hello@cigartale.app">hello@cigartale.app</a><span>For adults 18 and over. CigarTale does not sell tobacco.</span>
+</footer>
+</div>
+</body>
+</html>

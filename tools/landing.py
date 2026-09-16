@@ -1,3 +1,6 @@
+import os
+# The generated pages always belong at the repository root, whatever directory this is run from.
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import os, json, re
 exec(open(__import__('os').path.join(__import__('os').path.dirname(__file__),'legal.py')).read().split("pages = {")[0])  # reuse mark(), CSS, page() and legal texts
 EXTRA_CSS = '''
@@ -83,25 +86,25 @@ EN = dict(
  nav='<a href="#how">How it works</a><a href="#stories">Stories</a><a href="support.html">Support</a>',
  eyebrow='An audio companion for cigar lovers', h1='Every cigar has a story.',
  lead='Point the camera at the band, or type the name, and a cigar master tells you where the leaf was grown, who rolled it and how the line came to be. About nine minutes a cigar.',
- cta='Request an invite', cta_href='mailto:hello@cigartale.app?subject=CigarTale%20pilot%20invite', cta2='How it works', meta='Private pilot in Dubai, iPhone first. English and Russian. For adults 18 and over.',
+ cta='Join the beta on TestFlight', cta_href='https://testflight.apple.com/join/Asy9JG5T', cta2='How it works', meta='Open beta on iPhone through TestFlight, run from Dubai. English and Russian. For adults 18 and over.',
  how='How an evening goes',
  steps=[('Scan the band','Frame the band of the cigar in your hand. The app reads the printed text and finds the line in our catalogue. If we do not know it yet, search by name or ask us to record it.'),('Press play','A free teaser, then the full story with chapters: the place, the people, how it is made, the tradition. It keeps playing with the screen locked, so the phone goes back in the pocket.'),('Keep it','Save the cigar with its size to your Humidor, rate it out of ten, and pick the story up where you left it, on any device.')],
  stories_h='Eleven stories to start', stories_p='Seven Cuban lines from Vuelta Abajo, one Dominican, one Nicaraguan, one Mexican, and one Cuban brand that began as a diplomatic gift. Written from published sources, with a fact table behind every claim, reviewed by a cigar master. More lines are added as the pilot goes.',
  not_h='What CigarTale is not',
  nots=['Not a shop. No prices, no retailers, no store locator. Stories are history and craft.','Not a verdict. Recognition finds the brand and line so the right story plays; it never claims a cigar is genuine or counterfeit.','Not for minors. The app asks for an 18+ confirmation before anything else.','Not a screen to stare at. Press play, lock the phone, enjoy the company.'],
- contact_h='Get in touch', contact_p='For an invite to the pilot, a story request or anything else: <a href="mailto:hello@cigartale.app">hello@cigartale.app</a>.',
+ contact_h='Get in touch', contact_p='A story you want recorded, a cigar we are missing, or anything else: <a href="mailto:hello@cigartale.app">hello@cigartale.app</a>.',
  title='CigarTale', desc='Every cigar has a story. CigarTale is an audio companion that recognises a cigar band and tells the history and craft behind the cigar. For adults 18 and over.')
 RU = dict(
  nav='<a href="#how">Как это работает</a><a href="#stories">Истории</a><a href="../support.html">Поддержка</a>',
  eyebrow='Аудиоспутник для тех, кто любит сигары', h1='У каждой сигары есть история.',
  lead='Наведите камеру на бант или введите название, и сигарный мастер расскажет, где рос лист, кто крутил сигару и как появилась линия. Примерно девять минут на сигару.',
- cta='Попросить приглашение', cta_href='mailto:hello@cigartale.app?subject=CigarTale%20pilot%20invite', cta2='Как это работает', meta='Закрытый пилот в Дубае, сначала iPhone. Английский и русский. Для взрослых от 18 лет.',
+ cta='Присоединиться к бете', cta_href='https://testflight.apple.com/join/Asy9JG5T', cta2='Как это работает', meta='Открытая бета на iPhone через TestFlight, из Дубая. Английский и русский. Для взрослых от 18 лет.',
  how='Как проходит вечер',
  steps=[('Сканируйте бант','Возьмите сигару в кадр так, чтобы был виден бант. Приложение прочитает надписи и найдёт линию в каталоге. Если её ещё нет, найдите по названию или попросите нас записать историю.'),('Нажмите Play','Бесплатный тизер, затем полная история по главам: место, люди, производство, традиция. Она играет с заблокированным экраном, телефон можно убрать в карман.'),('Сохраните','Положите сигару с её размером в хьюмидор, поставьте оценку по десятибалльной шкале и продолжите историю с того же места на любом устройстве.')],
  stories_h='Одиннадцать историй для начала', stories_p='Семь кубинских линий из Вуэльта-Абахо, одна доминиканская, одна никарагуанская, одна мексиканская и одна кубинская марка, начинавшаяся как дипломатический подарок. Написаны по опубликованным источникам, за каждым утверждением стоит таблица фактов, тексты проверяет сигарный мастер. Новые линии добавляются по ходу пилота.',
  not_h='Чем CigarTale не является',
  nots=['Не магазин. Ни цен, ни продавцов, ни карты магазинов. Истории про историю и ремесло.','Не экспертиза. Распознавание находит марку и линию, чтобы включить нужную историю; оно никогда не утверждает, что сигара подлинная или поддельная.','Не для несовершеннолетних. Первым делом приложение просит подтвердить 18+.','Не экран, в который надо смотреть. Нажмите Play, заблокируйте телефон, наслаждайтесь компанией.'],
- contact_h='Связаться', contact_p='За приглашением в пилот, с просьбой записать историю или по любому другому вопросу: <a href="mailto:hello@cigartale.app">hello@cigartale.app</a>.',
+ contact_h='Связаться', contact_p='История, которую хочется услышать, сигара, которой у нас нет, или любой другой вопрос: <a href="mailto:hello@cigartale.app">hello@cigartale.app</a>.',
  title='CigarTale', desc='У каждой сигары есть история. CigarTale распознаёт бант сигары и рассказывает историю и ремесло, стоящие за ней. Для взрослых от 18 лет.')
 def landing(lang, T):
     steps=''.join(f'<div class="card"><h3>{a}</h3><p>{b}</p></div>' for a,b in T['steps'])

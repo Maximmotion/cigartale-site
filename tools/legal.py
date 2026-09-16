@@ -1,4 +1,7 @@
 import os
+# The generated pages always belong at the repository root, whatever directory this is run from.
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+import os
 MARK = '''<svg viewBox="0 0 100 100" width="{s}" height="{s}" aria-hidden="true"><g fill="none" stroke="{c}" stroke-width="{sw}" stroke-linecap="round"><rect x="10" y="{y}" width="80" height="{h}" rx="{r}"/><circle cx="50" cy="50" r="11"/>{inner}<line x1="{l1}" y1="50" x2="30" y2="50"/><line x1="70" y1="50" x2="{l2}" y2="50"/></g></svg>'''
 def mark(s, c):
     if s >= 120: g=dict(sw=2.6,y=34,h=32,inner='<circle cx="50" cy="50" r="4.5"/>',l1=22,l2=78)
@@ -186,7 +189,7 @@ support = '''
 <h3>Delete my account</h3>
 <p>In the app: Profile &rarr; Delete account. It removes your account and Humidor immediately; see the <a href="privacy.html">Privacy Policy</a> for what is anonymised.</p>
 <h3>Where to download</h3>
-<p>CigarTale is in a private pilot in Dubai. If you have been invited, follow the TestFlight or Play link you received; otherwise write to us and we will let you know when it opens.</p>
+<p>CigarTale is in beta on iPhone. Install TestFlight from the App Store, then open <a href="https://testflight.apple.com/join/Asy9JG5T">our TestFlight link</a>. Android comes later; write to us and we will tell you when it opens.</p>
 '''
 pages = {
  'index.html': ('CigarTale', index, 'Every cigar has a story. CigarTale is an audio companion that recognises a cigar band and tells the history and craft behind the cigar. For adults 18 and over.'),
